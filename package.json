@@ -1,0 +1,73 @@
+{
+  "name": "strapi-shopify-monorepo",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "postinstall": "lerna bootstrap",
+    "lint": "eslint --fix .",
+    "lint:staged": "eslint --fix",
+    "format": "prettier --write .",
+    "generate": "strapi generate",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint --edit",
+    "ngrok": "ngrok start -config ./ngrok.yml api"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/config-lerna-scopes": "^16.2.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.3",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
+    "ngrok": "^4.3.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@shopify/app-bridge": "^2.0.14",
+    "@shopify/app-bridge-react": "^2.0.6",
+    "@shopify/app-bridge-utils": "^2.0.14",
+    "@shopify/polaris": "^7.6.0",
+    "@strapi/plugin-i18n": "^4.1.2",
+    "@strapi/strapi": "^4.1.2",
+    "babel-loader": "^8.2.3",
+    "lerna": "^4.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sqlite3": "^4.2.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.70.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": null
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:staged"
+    ]
+  }
+}

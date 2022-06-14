@@ -1,0 +1,2 @@
+# Strapi Shopify Plugin Monorepo
+
