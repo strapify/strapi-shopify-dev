@@ -1,5 +1,5 @@
 {
-  "name": "strapi-shopify-monorepo",
+  "name": "strapi-shopify-dev",
   "private": true,
   "version": "0.0.1",
   "scripts": {
@@ -17,7 +17,7 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "commit-msg": "commitlint --edit",
-    "ngrok": "ngrok start -config ./ngrok.yml api"
+    "ngrok": "ngrok http 1337"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
